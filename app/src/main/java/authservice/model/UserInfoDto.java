@@ -3,10 +3,11 @@ package authservice.model;
 import authservice.entities.UserInfo;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import lombok.Data;
 
-@JsonNaming (PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class UserInfoDto extends UserInfo
-{
+@Data
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+public class UserInfoDto extends UserInfo {
 
     private String firstName; // first_name
 
@@ -15,6 +16,5 @@ public class UserInfoDto extends UserInfo
     private Long phoneNumber;
 
     private String email; // email
-
 
 }
